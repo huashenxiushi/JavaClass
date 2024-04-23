@@ -1,0 +1,15 @@
+.button {
+    -fx-background-color: transparent;
+}
+
+#toolbar{
+    -fx-background-color: white;
+}
+
+.image-info-vbox{
+    -fx-spacing: 15px;
+}
+
+#display-btn:pressed {
+    -fx-opacity: 0.5;
+}
