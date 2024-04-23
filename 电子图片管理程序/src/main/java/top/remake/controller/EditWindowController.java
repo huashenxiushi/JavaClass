@@ -30,7 +30,7 @@ import java.util.ResourceBundle;
 /**
  * @author ZeroTwo_CHEN
  */
-/
+
 
 
 /**这段代码是一个JavaFX应用程序的一部分，它定义了一个名为`EditWindowController`的控制器类，该类用于处理图像编辑窗口的用户交互。
