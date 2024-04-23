@@ -1,4 +1,5 @@
-package top.remake.utils;
+```java
+        package top.remake.utils;
 
 import top.remake.component.ThumbnailPanel;
 import top.remake.entity.ImageFile;
@@ -10,14 +11,23 @@ import java.util.List;
 import java.util.Locale;
 
 /**
- * @author ZeroTwo_CHEN
+ * 这是一个工具类，用于对缩略图面板和图像文件进行排序。
+ * 它提供了按名称、时间和大小进行升序和降序排序的功能。
+ * 使用了Collator类来进行基于语言环境的字符串比较。
  */
 public class SortUtil {
+    // 创建一个用于中文字符串比较的Collator实例
     private static final Collator COLLATOR_INSTANCE = Collator.getInstance(Locale.CHINA);
 
+    // 私有构造函数，防止实例化
     private SortUtil() {
     }
 
+    /**
+     * 对缩略图面板进行排序
+     * @param thumbnailPanels 要排序的缩略图面板列表
+     * @param sortOrder 排序方式
+     */
     public static void sortThumbnailPanel(List<ThumbnailPanel> thumbnailPanels, String sortOrder) {
         switch (sortOrder) {
             case SortOrder.ASC_SORT_BY_NAME ->
@@ -35,6 +45,11 @@ public class SortUtil {
         }
     }
 
+    /**
+     * 对图像文件进行排序
+     * @param imageFiles 要排序的图像文件列表
+     * @param sortOrder 排序方式
+     */
     public static void sortImageFile(List<ImageFile> imageFiles, String sortOrder) {
         switch (sortOrder) {
             case SortOrder.ASC_SORT_BY_NAME ->

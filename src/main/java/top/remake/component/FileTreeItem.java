@@ -1,4 +1,5 @@
-package top.remake.component;
+```java
+        package top.remake.component;
 
 import javafx.application.Platform;
 import javafx.collections.ObservableList;
@@ -13,9 +14,9 @@ import java.util.concurrent.CompletionException;
 import java.util.function.Supplier;
 
 /**
- * 用于文件夹的TreeItem
- *
- * @author ZeroTwo_CHEN
+ * 这是一个文件树项目类，继承自TreeItem类。
+ * 它用于表示文件夹在树形结构中的节点。
+ * 作者是ZeroTwo_CHEN。
  */
 public class FileTreeItem extends TreeItem<String> {
     /**
@@ -38,6 +39,11 @@ public class FileTreeItem extends TreeItem<String> {
      */
     private final Callable<List<? extends TreeItem<String>>> callable;
 
+    /**
+     * 构造方法，用于创建一个文件树项目对象。
+     * @param directory 文件夹
+     * @param callable 回调
+     */
     public FileTreeItem(File directory, Callable<List<? extends TreeItem<String>>> callable) {
         super(FileUtil.getFilename(directory), FileUtil.getFileIcon(directory));
         this.directory = directory;
@@ -47,7 +53,7 @@ public class FileTreeItem extends TreeItem<String> {
     }
 
     /**
-     * 重写该方法，使得该文件夹在展开时加载其子文件夹
+     * 重写getChildren方法，使得该文件夹在展开时加载其子文件夹
      */
     @Override
     public ObservableList<TreeItem<String>> getChildren() {
@@ -61,7 +67,7 @@ public class FileTreeItem extends TreeItem<String> {
     }
 
     /**
-     * 重写叶子方法
+     * 重写isLeaf方法，判断该节点是否为叶子节点
      */
     @Override
     public boolean isLeaf() {
@@ -69,7 +75,7 @@ public class FileTreeItem extends TreeItem<String> {
     }
 
     /**
-     * 展开监听器
+     * 添加展开监听器
      * 当关闭item时：取消异步加载 并将初始化标记位置为false
      */
     @SuppressWarnings("unchecked")
@@ -101,18 +107,35 @@ public class FileTreeItem extends TreeItem<String> {
         future = null;
     }
 
+    /**
+     * 获取该节点对应的文件夹
+     * @return 文件夹
+     */
     public File getDirectory() {
         return directory;
     }
 
+    /**
+     * 将Callable适配为Supplier
+     */
     private static class CallableToSupplierAdapter<T> implements Supplier<T> {
 
         private final Callable<T> callable;
 
+        /**
+         * 构造方法，用于创建一个CallableToSupplierAdapter对象。
+         * @param callable Callable对象
+         */
         private CallableToSupplierAdapter(Callable<T> callable) {
             this.callable = callable;
         }
 
+        /**
+         * 实现Supplier接口的get方法。
+         * 将Callable接口的call方法的返回值作为get方法的返回值。
+         * 如果call方法抛出异常，则将该异常包装为CompletionException并抛出。
+         * @return call方法的返回值
+         */
         @Override
         public T get() {
             try {
