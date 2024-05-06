@@ -1,8 +1,8 @@
 import net.coobird.thumbnailator.Thumbnails;
 import net.coobird.thumbnailator.name.Rename;
 import org.junit.jupiter.api.Test;
-import top.remake.DisplayWindow;
-import top.remake.EditWindow;
+import top.remake.ShowWindow;
+import top.remake.Editor;
 
 import javax.imageio.ImageIO;
 import javax.swing.filechooser.FileSystemView;
@@ -132,7 +132,7 @@ public class TestFileSystemView {
     public void test08() {
         String absolutePath = new File("C:\\Users\\cjhaz\\Pictures\\God of War\\ScreenShot-2022-2-1_10-46-30.png").getAbsolutePath();
         String[] args = {absolutePath};
-        DisplayWindow.main(args);
+        ShowWindow.main(args);
     }
 
 
@@ -140,7 +140,7 @@ public class TestFileSystemView {
     public void test09() {
         String absolutePath = new File("C:\\Users\\cjhaz\\Pictures\\God of War\\ScreenShot-2022-2-1_10-46-30.png").getAbsolutePath();
         String[] args = {absolutePath};
-        EditWindow.main(args);
+        Editor.main(args);
     }
 
     @Test

@@ -4,7 +4,7 @@ package top.remake.component;
 import javafx.geometry.Insets;
 import javafx.scene.control.*;
 import javafx.scene.layout.GridPane;
-import top.remake.entity.RenameData;
+import top.remake.entity.ReData;
 
 /**
  * 重命名窗口
@@ -12,7 +12,7 @@ import top.remake.entity.RenameData;
  * @author gzz
  */
 
-public class RenameImage extends Dialog<RenameData> {
+public class RenameImage extends Dialog<ReData> {
     private static final Label LABEL_1 = new Label("名称前缀:");
     private static final Label LABEL_2 = new Label("起始编号:");
     private static final Label LABEL_3 = new Label("编号位数:");
@@ -41,7 +41,7 @@ public class RenameImage extends Dialog<RenameData> {
         this.getDialogPane().getButtonTypes().addAll(ButtonType.OK, ButtonType.CANCEL);
         setResultConverter(dialogButton -> {
             if (dialogButton == ButtonType.OK) {
-                return new RenameData(textField.getText(), startNum.getValue(), digit.getValue());
+                return new ReData(textField.getText(), startNum.getValue(), digit.getValue());
             }
             return null;
         });

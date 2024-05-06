@@ -1,5 +1,4 @@
-```java
-        package top.remake.component;
+package top.remake.component;
 
 import javafx.application.Platform;
 import javafx.collections.ObservableList;

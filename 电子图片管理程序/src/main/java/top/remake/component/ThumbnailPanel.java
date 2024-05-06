@@ -12,7 +12,6 @@ import javafx.scene.input.MouseButton;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.paint.Color;
 import javafx.scene.text.TextAlignment;
-import top.remake.DisplayWindow;
 import top.remake.controller.ControllerMap;
 import top.remake.controller.MainWindowController;
 import top.remake.entity.ImageFile;

@@ -6,7 +6,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
-import top.remake.controller.EditWindowController;
+import top.remake.controller.EditorController;
 
 import java.util.Objects;
 
@@ -15,7 +15,7 @@ import java.util.Objects;
  * 它设置了编辑窗口的大小、图标，并加载了FXML布局文件。
  * 该类还包含一个main方法，用于启动编辑窗口。
  */
-public class EditWindow extends Application {
+public class Editor extends Application {
     // 图片路径
     private static String path;
 
@@ -25,14 +25,14 @@ public class EditWindow extends Application {
      */
     public static void main(String[] args) {
         // 从命令行参数中获取图片路径
-        EditWindow.path = args[0];
+        Editor.path = args[0];
 
         // 检查当前线程是否为JavaFX应用程序线程
         if (Platform.isFxApplicationThread()) {
             // 创建新的舞台
             Stage stage = new Stage();
             // 创建编辑窗口实例
-            EditWindow editWindow = new EditWindow();
+            Editor editWindow = new Editor();
             try {
                 // 启动编辑窗口
                 editWindow.start(stage);
@@ -57,7 +57,7 @@ public class EditWindow extends Application {
         // 创建场景
         Scene scene = new Scene(fxmlLoader.load(), 1100, 700);
         // 获取控制器
-        EditWindowController controller = fxmlLoader.getController();
+        EditorController controller = fxmlLoader.getController();
         // 设置窗口的图标
         stage.getIcons().add(new Image(Objects.requireNonNull(getClass().getResource("/image/icon.png")).toExternalForm()));
         // 将场景设置到舞台

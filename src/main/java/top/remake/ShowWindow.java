@@ -6,15 +6,16 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
-import top.remake.controller.DisplayWindowController;
+import top.remake.controller.ShowWindowController;
 
 import java.util.Objects;
 
 /**
- * DisplayWindow类是JavaFX应用程序的一个窗口，用于展示图片
- * @author ZeroTwo_CHEN
+ * 这是一个显示窗口类，用于打开和显示显示窗口。
+ * 它设置了显示窗口的大小、图标，并加载了FXML布局文件。
+ * 该类还包含一个main方法，用于启动显示窗口。
  */
-public class DisplayWindow extends Application {
+public class ShowWindow extends Application {
     /**
      * 数组的长度用于标记启动方式
      * 长度为1则为从主窗口双击启动
@@ -22,19 +23,21 @@ public class DisplayWindow extends Application {
      */
     private static String[] path = null;
 
-    // main方法是Java程序的入口点
+    /**
+     * 主程序入口点
+     * @param args 命令行参数，其中包含图片路径
+     */
     public static void main(String[] args) {
-        // 获取图片的路径
-        DisplayWindow.path = args;
-
-        // 检查当前线程是否是JavaFX Application Thread
+        ShowWindow.path = args;
+        // 检查当前线程是否为JavaFX应用程序线程
         if (Platform.isFxApplicationThread()) {
-            // 创建一个新的Stage
+            // 创建新的舞台
             Stage stage = new Stage();
-            DisplayWindow displayWindow = new DisplayWindow();
+            // 创建显示窗口实例
+            ShowWindow showWindow = new ShowWindow();
             try {
-                // 启动DisplayWindow
-                displayWindow.start(stage);
+                // 启动显示窗口
+                showWindow.start(stage);
             } catch (Exception e) {
                 e.printStackTrace();
             }
@@ -44,20 +47,24 @@ public class DisplayWindow extends Application {
         }
     }
 
-    // start方法是JavaFX应用程序的主要入口点
+    /**
+     * JavaFX应用程序的启动方法
+     * @param stage 主舞台
+     * @throws Exception 如果加载FXML文件或设置舞台时出现错误
+     */
     @Override
     public void start(Stage stage) throws Exception {
-        // 创建一个FXMLLoader对象，用于加载FXML文件
+        // 加载FXML布局文件
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/display-window.fxml"));
-        // 加载FXML文件并创建一个新的场景
+        // 创建场景
         Scene scene = new Scene(fxmlLoader.load(), 1100, 700);
-        // 获取DisplayWindowController
-        DisplayWindowController controller = fxmlLoader.getController();
-        // 设置舞台的图标
+        // 获取控制器
+        ShowWindowController controller = fxmlLoader.getController();
+        // 设置窗口的图标
         stage.getIcons().add(new Image(Objects.requireNonNull(getClass().getResource("/image/icon.png")).toExternalForm()));
-        // 将前面创建的场景设置为舞台的当前场景
+        // 将场景设置到舞台
         stage.setScene(scene);
-        // 根据path的长度决定如何初始化controller
+        // 根据路径的长度，决定启动方式
         if (path != null) {
             //从主界面进入展示界面
             if (path.length == 1) {

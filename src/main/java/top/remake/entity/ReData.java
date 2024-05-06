@@ -5,14 +5,14 @@ package top.remake.entity;
  *
  * @author gzz
  */
-public class RenameData {
+public class ReData {
     private final String name;
 
     private final int startNum;
 
     private final int digit;
 
-    public RenameData(String name, int start, int digit) {
+    public ReData(String name, int start, int digit) {
         this.name = name;
         this.startNum = start;
         this.digit = digit;

@@ -14,7 +14,7 @@ import top.remake.entity.BrushType;
  *
  * @author ZeroTwo_CHEN
  */
-public class DrawShapeUtil {
+public class PrintShapeUtil {
     /**
      * 笔刷类型
      */

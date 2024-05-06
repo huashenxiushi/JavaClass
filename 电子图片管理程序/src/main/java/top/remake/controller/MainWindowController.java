@@ -26,7 +26,6 @@ import javafx.util.Duration;
 import javafx.util.Pair;
 import org.controlsfx.control.BreadCrumbBar;
 import org.controlsfx.control.Notifications;
-import top.remake.DisplayWindow;
 import top.remake.component.*;
 import top.remake.entity.ImageFile;
 import top.remake.entity.RenameData;

@@ -17,7 +17,7 @@ import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import top.remake.entity.BrushType;
 import top.remake.entity.ImageFile;
-import top.remake.utils.DrawShapeUtil;
+import top.remake.utils.PrintShapeUtil;
 import top.remake.utils.FileUtil;
 
 import javax.imageio.ImageIO;
@@ -30,7 +30,7 @@ import java.util.ResourceBundle;
 /**
  * @author ZeroTwo_CHEN
  */
-public class EditWindowController implements Initializable {
+public class EditorController implements Initializable {
     @FXML
     private ImageView imageView;
 
@@ -73,7 +73,7 @@ public class EditWindowController implements Initializable {
 
     private Stage stage;
 
-    private final DrawShapeUtil drawShapeUtil = new DrawShapeUtil();
+    private final PrintShapeUtil drawShapeUtil = new PrintShapeUtil();
 
     /**
      * 图片与窗口的间隔

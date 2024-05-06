@@ -27,7 +27,7 @@ import javafx.stage.Stage;
 import javafx.util.Duration;
 import javafx.util.Pair;
 import org.controlsfx.control.Notifications;
-import top.remake.EditWindow;
+import top.remake.Editor;
 import top.remake.component.AttributeAlert;
 import top.remake.entity.ImageFile;
 import top.remake.entity.SortOrder;
@@ -43,7 +43,7 @@ import java.util.ResourceBundle;
 /**
  * @author ZeroTwo_CHEN
  */
-public class DisplayWindowController implements Initializable {
+public class ShowWindowController implements Initializable {
     @FXML
     private ImageView imageView;
 
@@ -530,6 +530,6 @@ public class DisplayWindowController implements Initializable {
     @FXML
     private void editImage() {
         String[] args = {imageFiles.get(currentIndex).getAbsolutePath()};
-        Platform.runLater(() -> EditWindow.main(args));
+        Platform.runLater(() -> Editor.main(args));
     }
 }

@@ -12,7 +12,7 @@ import javafx.scene.input.MouseButton;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.paint.Color;
 import javafx.scene.text.TextAlignment;
-import top.remake.DisplayWindow;
+import top.remake.ShowWindow;
 import top.remake.controller.ControllerMap;
 import top.remake.controller.MainWindowController;
 import top.remake.entity.ImageFile;
@@ -107,7 +107,7 @@ public class ThumbnailPanel extends BorderPane {
         this.setOnMouseClicked(event -> {
             if (event.getButton() == MouseButton.PRIMARY && event.getClickCount() == 2) {
                 String[] args = {imageFile.getAbsolutePath()};
-                Platform.runLater(() -> DisplayWindow.main(args));
+                Platform.runLater(() -> ShowWindow.main(args));
             }
             if (event.getButton() == MouseButton.PRIMARY && event.getClickCount() == 1) {
                 PreviewFlowPane parent = (PreviewFlowPane) this.getParent();

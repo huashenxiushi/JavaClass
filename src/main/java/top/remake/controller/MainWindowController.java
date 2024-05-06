@@ -26,10 +26,10 @@ import javafx.util.Duration;
 import javafx.util.Pair;
 import org.controlsfx.control.BreadCrumbBar;
 import org.controlsfx.control.Notifications;
-import top.remake.DisplayWindow;
+import top.remake.ShowWindow;
 import top.remake.component.*;
 import top.remake.entity.ImageFile;
-import top.remake.entity.RenameData;
+import top.remake.entity.ReData;
 import top.remake.entity.SortOrder;
 import top.remake.utils.FileUtil;
 import top.remake.utils.RandomUtil;
@@ -412,10 +412,10 @@ public class MainWindowController implements Initializable {
         } else if (selectedCount == 1) {
             ThumbnailPanel thumbnailPanel = previewFlowPane.getNewChoices().get(0);
             String[] args = {thumbnailPanel.getImageFile().getAbsolutePath(), ""};
-            Platform.runLater(() -> DisplayWindow.main(args));
+            Platform.runLater(() -> ShowWindow.main(args));
         } else {
             String[] args = {previewFlowPane.getThumbnailPanels().get(0).getImageFile().getAbsolutePath(), ""};
-            Platform.runLater(() -> DisplayWindow.main(args));
+            Platform.runLater(() -> ShowWindow.main(args));
         }
     }
 
@@ -500,9 +500,9 @@ public class MainWindowController implements Initializable {
             string1.ifPresent(e -> renameImage(string1.get(), -1, -1));
         } else {
             RenameImage renameImage = new RenameImage();
-            Optional<RenameData> data = renameImage.showAndWait();
+            Optional<ReData> data = renameImage.showAndWait();
             data.ifPresent(e -> {
-                RenameData data1 = data.get();
+                ReData data1 = data.get();
                 renameImage(data1.getName(), data1.getStartNum(), data1.getDigit());
                 refresh();
             });

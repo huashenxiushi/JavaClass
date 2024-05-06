@@ -1,5 +1,4 @@
-```java
-        package top.remake.utils;
+package top.remake.utils;
 
 import top.remake.component.ThumbnailPanel;
 import top.remake.entity.ImageFile;
