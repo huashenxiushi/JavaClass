@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+
+<?import javafx.scene.layout.VBox?>
+<AnchorPane prefHeight="400.0" prefWidth="600.0" stylesheets="@../css/display.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="imgstate.ShowController">
+    <children>
+      <BorderPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <center>
+                <StackPane fx:id="imagePane" BorderPane.alignment="CENTER">
+                    <children>
+                        <ImageView fx:id="imageView" cache="true" onMouseDragged="#onMouseDragged" onMouseEntered="#onMouseEntered" onMousePressed="#onMousePressed" onScroll="#scrollResize" pickOnBounds="true" preserveRatio="true" />
+                    </children>
+                </StackPane>
+         </center>
+         <bottom>
+                <AnchorPane id="toolbar" fx:id="toolBar" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="50.0" prefWidth="772.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <HBox alignment="CENTER" prefHeight="50.0" prefWidth="636.0" spacing="24.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="68.0" AnchorPane.rightAnchor="68.0" AnchorPane.topAnchor="0.0">
+                            <children>
+                                <Button id="display-btn" mnemonicParsing="false" onAction="#originalScale" style="-fx-border-radius:95;-fx-border-color: #b4d1f3;-fx-background-radius: 95">
+                                    <graphic>
+                                        <ImageView fitWidth="20" preserveRatio="true">
+                                            <Image backgroundLoading="true" url="@../image/btn-1.png" />
+                                        </ImageView>
+                                    </graphic>
+                                </Button>
+                                <Button id="display-btn" mnemonicParsing="false" onAction="#zoomIn" style="-fx-border-radius:95;-fx-border-color: #b4d1f3;-fx-background-radius: 95">
+                                    <graphic>
+                                        <ImageView fitWidth="20" preserveRatio="true">
+                                            <Image url="@../image/btn-2.png" />
+                                        </ImageView>
+                                    </graphic>
+                                </Button>
+                                <Button id="display-btn" mnemonicParsing="false" onAction="#zoomOut" style="-fx-border-radius:95;-fx-border-color: #b4d1f3;-fx-background-radius: 95">
+                                    <graphic>
+                                        <ImageView fitWidth="20" preserveRatio="true">
+                                            <Image backgroundLoading="true" url="@../image/btn-3.png" />
+                                        </ImageView>
+                                    </graphic>
+                                </Button>
+
+                                <Button id="display-btn" mnemonicParsing="false" onAction="#previousImage" style="-fx-border-radius:95;-fx-border-color: #b4d1f3;-fx-background-radius: 95">
+                                    <graphic>
+                                        <ImageView fitWidth="20" preserveRatio="true">
+                                            <Image backgroundLoading="true" url="@../image/btn-6.png" />
+                                        </ImageView>
+                                    </graphic>
+                                </Button>
+                                <Button id="display-btn" mnemonicParsing="false" onAction="#play" style="-fx-border-radius:95;-fx-border-color: #b4d1f3;-fx-background-radius: 95">
+                                    <graphic>
+                                        <ImageView fitWidth="20" preserveRatio="true">
+                                            <Image backgroundLoading="true" url="@../image/btn-7.png" />
+                                        </ImageView>
+                                    </graphic>
+                                </Button>
+                                <Button id="display-btn" mnemonicParsing="false" onAction="#nextImage" style="-fx-border-radius:95;-fx-border-color: #b4d1f3;-fx-background-radius: 95">
+                                    <graphic>
+                                        <ImageView fitWidth="20" preserveRatio="true">
+                                            <Image backgroundLoading="true" url="@../image/btn-8.png" />
+                                        </ImageView>
+                                    </graphic>
+                                </Button>
+                                <Button id="display-btn" mnemonicParsing="false" onAction="#turnLeft" style="-fx-border-radius:95;-fx-border-color: #b4d1f3;-fx-background-radius: 95">
+                                    <graphic>
+                                        <ImageView fitWidth="20" preserveRatio="true">
+                                            <Image backgroundLoading="true" url="@../image/btn-4.png" />
+                                        </ImageView>
+                                    </graphic>
+                                </Button>
+                                <Button id="display-btn" mnemonicParsing="false" onAction="#turnRight" style="-fx-border-radius:95;-fx-border-color: #b4d1f3;-fx-background-radius: 95">
+                                    <graphic>
+                                        <ImageView fitWidth="20" preserveRatio="true">
+                                            <Image backgroundLoading="true" url="@../image/btn-5.png" />
+                                        </ImageView>
+                                    </graphic>
+                                </Button>
+                                <Button id="display-btn" mnemonicParsing="false" onAction="#delete" style="-fx-border-radius:95;-fx-border-color: #b4d1f3;-fx-background-radius: 95">
+                                    <graphic>
+                                        <ImageView fitWidth="20" preserveRatio="true">
+                                            <Image backgroundLoading="true" url="@../image/btn-11.png" />
+                                        </ImageView>
+                                    </graphic>
+                                </Button>
+                            </children>
+                        </HBox>
+                    </children>
+                </AnchorPane>
+         </bottom>
+      </BorderPane>
+    </children>
+</AnchorPane>

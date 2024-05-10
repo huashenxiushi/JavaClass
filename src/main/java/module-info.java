@@ -7,7 +7,7 @@ module EIMA {
     requires rxcontrols;
     requires thumbnailator;
 
-    opens top.remake to javafx.fxml;
-    opens top.remake.controller to javafx.fxml;
-    exports top.remake;
+    opens main to javafx.fxml;
+    opens imgstate to javafx.fxml;
+    exports main;
 }

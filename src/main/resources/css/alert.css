@@ -1,0 +1,30 @@
+/* 修改对话框标题样式 */
+.dialog-pane .header-panel {
+    -fx-background-color: black; /* 修改标题背景色 */
+    -fx-text-fill: white; /* 修改标题文字颜色 */
+}
+
+/* 修改对话框内容样式 */
+.dialog-pane .content.label {
+    -fx-font-size: 18px; /* 修改内容字体大小 */
+    -fx-font-family: Microsoft YaHei ;
+}
+
+
+
+/* 修改按钮样式 */
+.dialog-pane .button {
+    border: none;
+    border-radius: 10px;
+    height: 50px;
+    width: 150px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #888888;
+    cursor: pointer;
+    transition: color 0.3s;
+
+}
+.dialog-pane .button:hover {
+    color: coral;
+}
