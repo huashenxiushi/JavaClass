@@ -11,7 +11,6 @@ import java.util.stream.Collectors;
 /**
  * 这是一个目录加载器类，实现了Callable接口。
  * 它用于异步加载目录，并将目录转换为FileTreeItem对象。
- * 作者是ZeroTwo_CHEN。
  */
 public class DirectoryLoader implements Callable<List<? extends TreeItem<String>>> {
 

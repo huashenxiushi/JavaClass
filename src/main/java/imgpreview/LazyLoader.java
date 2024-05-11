@@ -7,8 +7,6 @@ import javafx.util.Callback;
 
 /**
  * 懒加载TextFieldTreeCell
- *
- * @author ZeroTwo_CHEN
  */
 public class LazyLoader extends TextFieldTreeCell<String> {
 

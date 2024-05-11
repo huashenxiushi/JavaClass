@@ -20,8 +20,6 @@ import imgmethod.FileUtil;
 
 /**
  * 缩略图面板
- *
- * @author ZeroTwo_CHEN
  */
 public class ThumbnailPanel extends BorderPane {
     /**

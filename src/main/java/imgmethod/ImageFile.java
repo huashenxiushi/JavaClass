@@ -10,8 +10,6 @@ import java.time.format.DateTimeFormatter;
 
 /**
  * 图片相关信息的包装类
- *
- * @author ZeroTwo_CHEN
  */
 public class ImageFile {
     private static final String DEFAULT_VALUE = "NULL";
