@@ -2,8 +2,6 @@ package imgmethod;
 
 /**
  * 返回重命名时用户选择的名称前缀、起始编号、编号位数
- *
- * @author gzz
  */
 public class RenameImages {
     private final String name;

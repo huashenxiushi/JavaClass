@@ -15,8 +15,6 @@ import java.io.IOException;
 
 /**
  * 工具类
- *
- * @author ZeroTwo_CHEN
  */
 public class FileUtil {
 

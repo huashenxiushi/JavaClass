@@ -40,10 +40,7 @@ import java.text.NumberFormat;
 import java.util.List;
 import java.util.*;
 
-/**
- * @author ZeroTwo_CHEN
- * @author gzz
- */
+
 public class MainController implements Initializable {
     @FXML
     private AnchorPane root;

@@ -2,8 +2,6 @@ package imgmethod;
 
 /**
  * 排序类型
- *
- * @author ZeroTwo_CHEN
  */
 public final class SortOrder {
     private SortOrder() {

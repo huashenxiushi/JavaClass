@@ -10,8 +10,6 @@ import javafx.scene.layout.GridPane;
 
 /**
  * 重命名窗口
- *
- * @author gzz
  */
 
 public class RenameImage extends Dialog<RenameImages> {

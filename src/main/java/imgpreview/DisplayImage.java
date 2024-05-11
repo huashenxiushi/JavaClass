@@ -13,8 +13,6 @@ import java.util.List;
 
 /**
  * 图片预览面板
- *
- * @author ZeroTwo_CHEN
  */
 public class DisplayImage extends FlowPane {
     /**

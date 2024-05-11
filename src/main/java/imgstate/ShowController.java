@@ -40,9 +40,7 @@ import java.util.ArrayList;
 import java.util.Optional;
 import java.util.ResourceBundle;
 
-/**
- * @author ZeroTwo_CHEN
- */
+
 public class ShowController implements Initializable {
     @FXML
     private ImageView imageView;

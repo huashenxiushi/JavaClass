@@ -15,7 +15,6 @@ import java.util.function.Supplier;
 /**
  * 这是一个文件树项目类，继承自TreeItem类。
  * 它用于表示文件夹在树形结构中的节点。
- * 作者是ZeroTwo_CHEN。
  */
 public class DirectoryTree extends TreeItem<String> {
     /**

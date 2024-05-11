@@ -8,7 +8,6 @@ import java.util.Random;
  * 这是一个工具类，用于生成随机名称。
  * 它提供了一个方法，该方法返回一个基于精确计算机时间和随机数的字符串。
  * 该类的构造函数是私有的，防止实例化。
- * 作者是gzz。
  */
 public class GetTimeUtil {
 

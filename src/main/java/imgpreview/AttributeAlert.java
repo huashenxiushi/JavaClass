@@ -9,11 +9,7 @@ import javafx.stage.StageStyle;
 import imgmethod.ImageFile;
 import imgmethod.FileUtil;
 
-/**
- * 这是一个属性警告类，继承自Alert类。
- * 它用于显示图像文件的属性，包括名称、类型、大小、尺寸、位置和时间等。
- * 作者是ZeroTwo_CHEN。
- */
+
 public class AttributeAlert extends Alert {
 
     // 创建一个VBox对象，用于存放属性的键
