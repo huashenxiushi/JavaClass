@@ -1,11 +1,11 @@
-package imgpreview;
+package imagepreview;
 
 import javafx.scene.layout.FlowPane;
-import imgstate.ControllerMap;
-import imgstate.MainController;
-import imgmethod.ImageFile;
-import imgmethod.FileUtil;
-import imgmethod.SortUtil;
+import imagestate.ControllerMap;
+import imagestate.MainController;
+import imagemethod.ImageFile;
+import imagemethod.FileUtil;
+import imagemethod.SortUtil;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -99,24 +99,24 @@ public class DisplayImage extends FlowPane {
     /**
      * 删除一张已选择的图片
      */
-    public void deleteImgFromList(Object obj) {
-        ThumbnailPanel img = (ThumbnailPanel) obj;
+    public void deleteimageFromList(Object obj) {
+        ThumbnailPanel image = (ThumbnailPanel) obj;
         oldChoices.clear();
         oldChoices.addAll(newChoices);
-        img.removeSelect();
-        newChoices.remove(img);
+        image.removeSelect();
+        newChoices.remove(image);
 
     }
 
     /**
      * 增加一张图片到已选择图片中
      */
-    public void addImgToList(Object obj) {
-        ThumbnailPanel img = (ThumbnailPanel) obj;
+    public void addimageToList(Object obj) {
+        ThumbnailPanel image = (ThumbnailPanel) obj;
         oldChoices.clear();
         oldChoices.addAll(newChoices);
-        newChoices.add(img);
-        img.select();
+        newChoices.add(image);
+        image.select();
     }
 
     /**
@@ -127,13 +127,13 @@ public class DisplayImage extends FlowPane {
     public void selectAll() {
         oldChoices.clear();
         oldChoices.addAll(newChoices);
-        for (ThumbnailPanel img : thumbnailPanels) {
-            if (img.getIsSelected()) {
-                img.removeSelect();
-                newChoices.remove(img);
+        for (ThumbnailPanel image : thumbnailPanels) {
+            if (image.getIsSelected()) {
+                image.removeSelect();
+                newChoices.remove(image);
             } else {
-                img.select();
-                newChoices.add(img);
+                image.select();
+                newChoices.add(image);
             }
         }
     }

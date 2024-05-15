@@ -8,6 +8,6 @@ module EIMA {
     requires thumbnailator;
 
     opens main to javafx.fxml;
-    opens imgstate to javafx.fxml;
+    opens imagestate to javafx.fxml;
     exports main;
 }

@@ -1,8 +1,8 @@
-package imgstate;
+package imagestate;
 
 import com.leewyatt.rxcontrols.utils.StringUtil;
-import imgmethod.*;
-import imgpreview.*;
+import imagemethod.*;
+import imagepreview.*;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -317,7 +317,7 @@ public class MainController implements Initializable {
             rectangle.setVisible(true);
             //选择矩形所经过的图片
             if (width >= 10 && height >= 10) {
-                selectImg();
+                selectimage();
             }
 
 
@@ -342,7 +342,7 @@ public class MainController implements Initializable {
     /**
      * 根据矩形的数据选择图片
      */
-    private void selectImg() {
+    private void selectimage() {
         previewFlowPane.clearSelect();
         for (ThumbnailPanel pane : previewFlowPane.getThumbnailPanels()) {
             boolean isIntersects = rectangle.intersects(pane.getBoundsInParent());
@@ -417,25 +417,25 @@ public class MainController implements Initializable {
         return searchField;
     }
 
-    public List<ThumbnailPanel> getCopyImg() {
-        return copyImg;
+    public List<ThumbnailPanel> getCopyimage() {
+        return copyimage;
     }
 
-    private List<ThumbnailPanel> copyImg = new ArrayList<>();
+    private List<ThumbnailPanel> copyimage = new ArrayList<>();
 
     /**
      * 复制图片
      */
     @FXML
     private void copyImage() {
-        copyImg.clear();
-        copyImg.addAll(previewFlowPane.getNewChoices());
+        copyimage.clear();
+        copyimage.addAll(previewFlowPane.getNewChoices());
 
     }
 
     @FXML
     private void pasteImage() {
-        List<ThumbnailPanel> images = getCopyImg();
+        List<ThumbnailPanel> images = getCopyimage();
         if (images.size() == 0) {
             return;
         }
@@ -707,7 +707,7 @@ public class MainController implements Initializable {
                 //compress.setDisable(false);
             }
 
-            paste.setDisable(copyImg.size() == 0);
+            paste.setDisable(copyimage.size() == 0);
 
             attribute.setDisable(previewFlowPane.getSelectedCount() != 1);
 

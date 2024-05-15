@@ -1,4 +1,4 @@
-package imgmethod;
+package imagemethod;
 
 /**
  * 返回重命名时用户选择的名称前缀、起始编号、编号位数

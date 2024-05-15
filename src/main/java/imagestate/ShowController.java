@@ -1,4 +1,4 @@
-package imgstate;
+package imagestate;
 
 import javafx.animation.Animation;
 import javafx.animation.KeyFrame;
@@ -28,11 +28,11 @@ import javafx.stage.Stage;
 import javafx.util.Duration;
 import javafx.util.Pair;
 import org.controlsfx.control.Notifications;
-import imgpreview.AttributeAlert;
-import imgmethod.ImageFile;
-import imgmethod.SortOrder;
-import imgmethod.FileUtil;
-import imgmethod.SortUtil;
+import imagepreview.AttributeAlert;
+import imagemethod.ImageFile;
+import imagemethod.SortOrder;
+import imagemethod.FileUtil;
+import imagemethod.SortUtil;
 
 import java.io.File;
 import java.net.URL;

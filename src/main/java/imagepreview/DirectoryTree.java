@@ -1,9 +1,9 @@
-package imgpreview;
+package imagepreview;
 
 import javafx.application.Platform;
 import javafx.collections.ObservableList;
 import javafx.scene.control.TreeItem;
-import imgmethod.FileUtil;
+import imagemethod.FileUtil;
 
 import java.io.File;
 import java.util.List;

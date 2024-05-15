@@ -1,4 +1,4 @@
-package imgmethod;
+package imagemethod;
 
 
 import javafx.geometry.Insets;

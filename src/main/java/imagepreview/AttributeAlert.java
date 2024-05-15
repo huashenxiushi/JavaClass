@@ -1,4 +1,4 @@
-package imgpreview;
+package imagepreview;
 
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
@@ -6,8 +6,8 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Modality;
 import javafx.stage.StageStyle;
-import imgmethod.ImageFile;
-import imgmethod.FileUtil;
+import imagemethod.ImageFile;
+import imagemethod.FileUtil;
 
 
 public class AttributeAlert extends Alert {

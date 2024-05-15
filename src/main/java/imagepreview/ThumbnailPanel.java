@@ -1,4 +1,4 @@
-package imgpreview;
+package imagepreview;
 
 import com.leewyatt.rxcontrols.controls.RXHighlightText;
 import javafx.application.Platform;
@@ -13,10 +13,10 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.paint.Color;
 import javafx.scene.text.TextAlignment;
 import main.Show;
-import imgstate.ControllerMap;
-import imgstate.MainController;
-import imgmethod.ImageFile;
-import imgmethod.FileUtil;
+import imagestate.ControllerMap;
+import imagestate.MainController;
+import imagemethod.ImageFile;
+import imagemethod.FileUtil;
 
 /**
  * 缩略图面板
@@ -113,11 +113,11 @@ public class ThumbnailPanel extends BorderPane {
                 if (event.isControlDown()) {
                     //图片已经选中，则取消选中
                     if (this.getIsSelected()) {
-                        parent.deleteImgFromList(this);
+                        parent.deleteimageFromList(this);
                     }
                     //图片未被选中，则选择该图片
                     else {
-                        parent.addImgToList(this);
+                        parent.addimageToList(this);
                     }
                 }
                 //shift多选
@@ -134,7 +134,7 @@ public class ThumbnailPanel extends BorderPane {
                     //否则就选中图片
                     else {
                         parent.clearSelect();
-                        parent.addImgToList(this);
+                        parent.addimageToList(this);
                         //标记为shift多选的起始位置
                         parent.setShiftSign(true);
                         parent.setFrom(parent.getThumbnailPanels().indexOf(this));

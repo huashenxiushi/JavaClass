@@ -1,4 +1,4 @@
-package imgmethod;
+package imagemethod;
 
 /**
  * 排序类型

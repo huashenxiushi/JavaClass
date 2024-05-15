@@ -1,4 +1,4 @@
-package imgstate;
+package imagestate;
 
 import java.util.HashMap;
 import java.util.Map;

@@ -5,7 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
-import imgstate.ControllerMap;
+import imagestate.ControllerMap;
 
 import java.util.Objects;
 

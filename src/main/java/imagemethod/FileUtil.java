@@ -1,4 +1,4 @@
-package imgmethod;
+package imagemethod;
 
 import javafx.embed.swing.SwingFXUtils;
 import javafx.scene.image.ImageView;

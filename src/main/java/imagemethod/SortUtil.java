@@ -1,6 +1,6 @@
-package imgmethod;
+package imagemethod;
 
-import imgpreview.ThumbnailPanel;
+import imagepreview.ThumbnailPanel;
 
 import java.text.Collator;
 import java.util.Comparator;

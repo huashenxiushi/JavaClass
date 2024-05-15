@@ -1,4 +1,4 @@
-package imgpreview;
+package imagepreview;
 
 import javafx.scene.control.TreeCell;
 import javafx.scene.control.TreeView;
